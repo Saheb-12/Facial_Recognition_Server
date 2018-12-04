@@ -1,0 +1,26 @@
+{
+  "name": "facial_recognition_server",
+  "version": "1.0.0",
+  "description": "This project contains the Back-End files for the Facial_Recognition Project. (Using Node.js and Express.js)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saheb-12/Facial_Recognition_Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saheb-12/Facial_Recognition_Server/issues"
+  },
+  "homepage": "https://github.com/Saheb-12/Facial_Recognition_Server#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}
