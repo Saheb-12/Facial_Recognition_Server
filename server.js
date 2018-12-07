@@ -37,13 +37,13 @@ server.get('/', (req, resp) => resp.send(`It is working !`));
 })
 
 // '/signIn' --> POST
-server.post('/signIn', (req, resp) => { signin.handleSignIn(req, resp, db, bcrypt) })
+server.post('/signIn', (req, resp) => { signin.handleSignIn(req, resp, db, bcrypt) });
 
 // '/register' --> POST
-server.post('/register', (req, resp) => { register.handleRegister(req, resp, db, bcrypt) })
+server.post('/register', (req, resp) => { register.handleRegister(req, resp, db, bcrypt) });
 
 // '/profile/:id' --> GET
-server.get('/profile/:id', (req, resp) => { profile.handleProfile(req, resp, db)})
+server.get('/profile/:id', (req, resp) => { profile.handleProfile(req, resp, db)});
 
 // '/image' --> PUT
 server.put('/image', (req, resp) => { image.handleImage(req, resp, db)});
@@ -52,7 +52,6 @@ server.put('/image', (req, resp) => { image.handleImage(req, resp, db)});
 server.post('/imageUrl', (req, resp) => { image.handleImageUrl(req, resp) });
 
 //Server running on port 3003
-const PORT = process.env.PORT;
-server.listen(PORT || 3003, () => {
-	console.log(`Server running on port ${PORT}`);
-})
+server.listen(process.env.PORT || 3003, () => {
+	console.log(`Server running on port ${process.env.PORT}`);
+});
