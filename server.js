@@ -55,4 +55,4 @@ server.post('/imageUrl', (req, resp) => { image.handleImageUrl(req, resp) });
 const PORT = process.env.PORT;
 server.listen(PORT || 3003, () => {
 	console.log(`Server running on port ${PORT}`);
-});
+})
