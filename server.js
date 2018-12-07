@@ -55,6 +55,7 @@ server.put('/image', (req, resp) => { image.handleImage(req, resp, db)});
 server.post('/imageUrl', (req, resp) => { image.handleImageUrl(req, resp) });
 
 //Server running on port 3003
-server.listen(3003, () => {
-	console.log('Server running on port 3003');
+const PORT = process.env.PORT;
+server.listen(PORT, () => {
+	console.log(`Server running on port ${PORT}`);
 });
