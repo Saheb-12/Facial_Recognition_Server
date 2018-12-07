@@ -33,10 +33,7 @@ const db = knex({
 });
 
 // '/' --> root path
-server.get('/', (req, resp) => {
-	db.select('*').from('users').then(data => {
-		console.log(data);
-	});
+server.get('/', (req, resp) => resp.send(`It is working !`);
 })
 
 // '/signIn' --> POST
