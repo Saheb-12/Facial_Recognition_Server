@@ -1,7 +1,7 @@
 const handleRegister = (req, resp, db, bcrypt) => {
 	const { name, password, email } = req.body;
 	if( !email || !name || !password){
-		return resp.status(400).json("Invalid Username or Password");
+		return resp.status(400).json("Please Enter all the details");
 	}
 	const hash = bcrypt.hashSync(password);
 	db.transaction(trx => {
@@ -22,7 +22,7 @@ const handleRegister = (req, resp, db, bcrypt) => {
 				resp.json(data[0]);
 			})
 			.catch(err => {
-				resp.status(400).json(err);
+				resp.status(400).json("Unable to register user");
 			})
 		})
 		.then(trx.commit)
