@@ -33,7 +33,7 @@ const db = knex({
 });
 
 // '/' --> root path
-server.get('/', (req, resp) => resp.send(`It is working !`)); });
+server.get('/', (req, resp) => resp.send(`It is working !`));
 
 // '/signIn' --> POST
 server.post('/signIn', (req, resp) => { signin.handleSignIn(req, resp, db, bcrypt) });
