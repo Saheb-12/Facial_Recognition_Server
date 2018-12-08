@@ -33,8 +33,7 @@ const db = knex({
 });
 
 // '/' --> root path
-server.get('/', (req, resp) => resp.send(`It is working !`));
-})
+server.get('/', (req, resp) => resp.send(`It is working !`)); });
 
 // '/signIn' --> POST
 server.post('/signIn', (req, resp) => { signin.handleSignIn(req, resp, db, bcrypt) });
@@ -43,15 +42,13 @@ server.post('/signIn', (req, resp) => { signin.handleSignIn(req, resp, db, bcryp
 server.post('/register', (req, resp) => { register.handleRegister(req, resp, db, bcrypt) });
 
 // '/profile/:id' --> GET
-server.get('/profile/:id', (req, resp) => { profile.handleProfile(req, resp, db)});
+server.get('/profile/:id', (req, resp) => { profile.handleProfile(req, resp, db) });
 
 // '/image' --> PUT
-server.put('/image', (req, resp) => { image.handleImage(req, resp, db)});
+server.put('/image', (req, resp) => { image.handleImage(req, resp, db) });
 
 // '/imageUrl' --> POST
 server.post('/imageUrl', (req, resp) => { image.handleImageUrl(req, resp) });
 
 //Server running on port 3003
-server.listen(process.env.PORT || 3003, () => {
-	console.log(`Server running on port ${process.env.PORT}`);
-});
+server.listen( process.env.PORT || 3003, () => { console.log(`Server running on port ${process.env.PORT}`); });
